@@ -22,7 +22,7 @@ const styles = (theme) => ({
     display: 'flex',
     justifyContent: 'center',
     backgroundColor: theme.palette.warning.main,
-    padding: theme.spacing(8, 3),
+    padding: theme.spacing(15, 3),
   },
   cardContent: {
     maxWidth: 400,
@@ -78,10 +78,10 @@ function ProductCTA(props) {
           <div className={classes.card}>
             <form onSubmit={handleSubmit} className={classes.cardContent}>
               <Typography variant="h2" component="h2" gutterBottom>
-                Receive offers
+                Win Giveaways
               </Typography>
               <Typography variant="h5">
-                Taste the holidays of the everyday close to home.
+                Taste home cooked food close to home.
               </Typography>
               {/*
               <TextField
