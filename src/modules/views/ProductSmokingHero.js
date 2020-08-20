@@ -33,9 +33,9 @@ function ProductSmokingHero(props) {
 
   return (
     <Container className={classes.root} component="section">
-      <Button className={classes.button}>
+      <Button className={classes.button} href="tel:+1-909-293-8790">
         <Typography variant="h4" component="span">
-          Got any questions? Need help?
+          Got any questions? Call us at (909) 293-8790
         </Typography>
       </Button>
       <Typography variant="subtitle1" className={classes.link}>
