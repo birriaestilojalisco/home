@@ -11,6 +11,15 @@ import terms from './modules/views/terms.md';
 import AppFooter from './modules/views/AppFooter';
 
 function Terms() {
+  const [termsText, setTermsText] = React.useState('');
+  React.useEffect(() => {
+    fetch(terms)
+    .then(response => response.text())
+    .then(text => {
+      setTermsText(text);
+    });
+  });
+
   return (
     <React.Fragment>
       <AppAppBar />
@@ -19,7 +28,7 @@ function Terms() {
           <Typography variant="h3" gutterBottom marked="center" align="center">
             Terms
           </Typography>
-          <Markdown>{terms}</Markdown>
+          <Markdown>{termsText}</Markdown>
         </Box>
       </Container>
       <AppFooter />

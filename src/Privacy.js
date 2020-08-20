@@ -10,15 +10,16 @@ import AppAppBar from './modules/views/AppAppBar';
 import privacy from './modules/views/privacy.md';
 import AppFooter from './modules/views/AppFooter';
 
-fetch(privacy)
-  .then(response => response.text())
-  .then(text => {
-    // Logs a string of Markdown content.
-    // Now you could use e.g. <rexxars/react-markdown> to render it.
-    console.log(text);
+function Privacy() {
+  const [privacyText, setPrivacyText] = React.useState('');
+  React.useEffect(() => {
+    fetch(privacy)
+    .then(response => response.text())
+    .then(text => {
+      setPrivacyText(text);
+    });
   });
 
-function Privacy() {
   return (
     <React.Fragment>
       <AppAppBar />
@@ -27,7 +28,7 @@ function Privacy() {
           <Typography variant="h3" gutterBottom marked="center" align="center">
             Privacy
           </Typography>
-          <Markdown>{privacy}</Markdown>
+          <Markdown>{privacyText}</Markdown>
         </Box>
       </Container>
       <AppFooter />
