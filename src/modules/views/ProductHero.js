@@ -57,9 +57,10 @@ function ProductHero(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/premium-themes/onepirate/sign-up/"
+        target="_blank"
+        href="https://www.instagram.com/birriaestilojalisco909"
       >
-        Register
+        Follow Us
       </Button>
       <Typography variant="body2" color="inherit" className={classes.more}>
         Discover the experience
