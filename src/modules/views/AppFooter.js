@@ -14,8 +14,8 @@ function Copyright() {
   return (
     <React.Fragment>
       {'© '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="/">
+        Birria Estilo Jalisco
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
@@ -107,8 +107,8 @@ export default function AppFooter() {
                   className={classes.icon}
                 >
                   <img
-                    src="/static/appFooterTwitter.png"
-                    alt="Twitter"
+                    src="/static/appFooterInstagram.png"
+                    alt="Instagram"
                   />
                 </a>
               </Grid>
