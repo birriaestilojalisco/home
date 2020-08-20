@@ -23,7 +23,7 @@ const styles = (theme) => ({
     height: '40vh',
     [theme.breakpoints.down('sm')]: {
       width: '100% !important',
-      height: 100,
+      height: 300,
     },
     '&:hover': {
       zIndex: 1,
