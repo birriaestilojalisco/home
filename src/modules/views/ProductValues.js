@@ -57,7 +57,7 @@ function ProductValues(props) {
                 alt="suitcase"
               />
               <Typography variant="h6" className={classes.title}>
-                The best luxury hotels
+                The best tacos
               </Typography>
               <Typography variant="h5">
                 {
@@ -95,7 +95,7 @@ function ProductValues(props) {
                 alt="clock"
               />
               <Typography variant="h6" className={classes.title}>
-                Exclusive rates
+                Exclusive offers
               </Typography>
               <Typography variant="h5">
                 {'By registering, you will access specially negotiated rates '}
