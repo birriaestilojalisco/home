@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '../components/Typography';
+import { FormattedMessage } from 'react-intl';
 
 const styles = (theme) => ({
   root: {
@@ -35,11 +36,14 @@ function ProductSmokingHero(props) {
     <Container className={classes.root} component="section">
       <Button className={classes.button} href="tel:+1-909-293-8790">
         <Typography variant="h4" component="span">
-          Got any questions? Call us at (909) 293-8790
+          <FormattedMessage 
+            id="product-smoking-hero.action.title" 
+            default-message="Got any questions? Call us at (909) 293-8790" 
+            description="action title"/>
         </Typography>
       </Button>
       <Typography variant="subtitle1" className={classes.link}>
-        We are here to help. Get in touch!
+        <FormattedMessage id="product-smoking-hero.action.subtitle" default-message="We are here to help. Get in touch!" description="action subtitle"/>
       </Typography>
       <img
         src="/static/producBuoy.svg"

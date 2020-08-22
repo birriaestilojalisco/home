@@ -5,6 +5,7 @@ import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import TextField from '../components/TextField';
+import { FormattedMessage } from 'react-intl';
 
 import {
   Link as RouterLink
@@ -14,8 +15,11 @@ function Copyright() {
   return (
     <React.Fragment>
       {'© '}
-      <Link color="inherit" href="/">
-        Birria Estilo Jalisco
+      <Link color="inherit" component={RouterLink} to="/">
+        <FormattedMessage 
+          id="app.author" 
+          default-message="birria estilo jalisco" 
+          description="author"/>
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
@@ -71,19 +75,23 @@ const LANGUAGES = [
     name: 'English',
   },
   {
-    code: 'fr-FR',
-    name: 'Français',
+    code: 'es-MX',
+    name: 'Español',
   },
 ];
 
 export default function AppFooter() {
   const classes = useStyles();
 
+  const handleLangaugeChange = (event) => {
+    //strings.setLanguage(event.target.value || 'en-US');
+  };
+
   return (
     <Typography component="footer" className={classes.root}>
       <Container className={classes.container}>
         <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
+          <Grid item xs={8} sm={5} md={3}>
             <Grid
               container
               direction="column"
@@ -117,25 +125,42 @@ export default function AppFooter() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={6} sm={4} md={2}>
+          <Grid item xs={4} sm={4} md={2}>
             <Typography variant="h6" marked="left" gutterBottom>
-              Legal
+              <FormattedMessage 
+                id="app-footer.legal.title" 
+                default-message="Legal" 
+                description="legal"/>
             </Typography>
             <ul className={classes.list}>
               <li className={classes.listItem}>
-                <Link to="/terms" component={RouterLink}>Terms</Link>
+                <Link to="/terms" component={RouterLink}>
+                  <FormattedMessage 
+                    id="app-footer.legal.terms.title" 
+                    default-message="Terms" 
+                    description="terms"/>
+                </Link>
               </li>
               <li className={classes.listItem}>
-                <Link to="/privacy" component={RouterLink} >Privacy</Link>
+                <Link to="/privacy" component={RouterLink} >
+                  <FormattedMessage 
+                    id="app-footer.legal.privacy.title" 
+                    default-message="Privacy" 
+                    description="privacy"/>
+                </Link>
               </li>
             </ul>
           </Grid>
-          <Grid item xs={6} sm={8} md={4}>
+          <Grid item xs={6} sm={9} md={4}>
             <Typography variant="h6" marked="left" gutterBottom>
-              Language
+              <FormattedMessage 
+                id="app-footer.language.title" 
+                default-message="Language" 
+                description="language"/>
             </Typography>
             <TextField
               select
+              onChange={handleLangaugeChange}
               SelectProps={{
                 native: true,
               }}

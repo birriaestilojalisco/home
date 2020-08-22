@@ -8,6 +8,7 @@ import Typography from '../components/Typography';
 import TextField from '../components/TextField';
 import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
+import { FormattedMessage } from 'react-intl';
 
 const styles = (theme) => ({
   root: {
@@ -78,10 +79,16 @@ function ProductCTA(props) {
           <div className={classes.card}>
             <form onSubmit={handleSubmit} className={classes.cardContent}>
               <Typography variant="h2" component="h2" gutterBottom>
-                Win Giveaways
+                <FormattedMessage 
+                  id="product-cta.card.title" 
+                  default-message="Win Giveaways" 
+                  description="card title"/>
               </Typography>
               <Typography variant="h5">
-                Taste home cooked food close to home.
+                <FormattedMessage 
+                  id="product-cta.card.subtitle" 
+                  default-message="Taste home cooked food close to home." 
+                  description="card subtitle"/>
               </Typography>
               {/*
               <TextField

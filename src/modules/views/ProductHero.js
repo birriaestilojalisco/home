@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
+import { FormattedMessage } from 'react-intl';
 
 const backgroundImage = 'https://images.unsplash.com/photo-1584208632869-05fa2b2a5934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3625&q=80'
   //'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
@@ -41,7 +42,10 @@ function ProductHero(props) {
         alt="increase priority"
       />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        Upgrade your Sundays
+        <FormattedMessage
+          id="product-hero.header" 
+          default-message="Upgrade Your Sundays"
+          description="header" />
       </Typography>
       <Typography
         color="inherit"
@@ -49,7 +53,10 @@ function ProductHero(props) {
         variant="h5"
         className={classes.h5}
       >
-        Enjoy delicious birria tacos every Sunday.
+        <FormattedMessage
+          id="product-hero.subheader" 
+          default-message="Enjoy delicious birria tacos every Sunday."
+          description="subheader" />
       </Typography>
       <Button
         color="secondary"
@@ -60,10 +67,16 @@ function ProductHero(props) {
         target="_blank"
         href="https://www.instagram.com/birriaestilojalisco909"
       >
-        Follow Us
+        <FormattedMessage 
+          id="product-hero.action"
+          default-messsage="Follow Us on Instagram"
+          description="product hero action" />
       </Button>
       <Typography variant="body2" color="inherit" className={classes.more}>
-        Discover the experience
+        <FormattedMessage 
+        id="product-hero.footnote" 
+        default-message="Discover the experience" 
+        description="product hero footnote" />
       </Typography>
     </ProductHeroLayout>
   );

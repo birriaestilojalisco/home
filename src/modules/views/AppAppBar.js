@@ -11,14 +11,20 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {
   Link as RouterLink
 } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
 
 const styles = (theme) => ({
   title: {
-    fontSize: 20,
+    fontSize: 28
+
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
     justifyContent: 'space-between',
+    minHeight: 105,
+  },
+  logo: {
+    height: 80,
   },
   left: {
     flex: 1,
@@ -50,7 +56,7 @@ function AppAppBar(props) {
         <Toolbar className={classes.toolbar}>
           <div className={classes.left} />
           <IconButton edge="start" color="inherit">
-            <img style={{height: "60px"}} src="/logo-300.png" />
+            <img className={classes.logo} src="/logo-300.png" />
           </IconButton>
           <Link
             variant="h4"
@@ -60,7 +66,10 @@ function AppAppBar(props) {
             component={RouterLink} 
             to="/"
           >
-            {'birria estilo jalisco'}
+            <FormattedMessage 
+              id="app.name"
+              defaultMessage="Birria Estilo Jalisco"
+              description="App Name"/>
           </Link>
           <div className={classes.right} />
           {/*
