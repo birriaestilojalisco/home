@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Home'
 import Privacy from './Privacy';
 import Terms from './Terms';
+import { IntlProviderWrapper } from './IntlContext';
 
 import {
   BrowserRouter as Router,
@@ -13,6 +14,7 @@ import {
 
 function App() {
   return (
+    <IntlProviderWrapper>
     <div className="App">
       <Router>
         <Switch>
@@ -29,6 +31,7 @@ function App() {
         </Switch>
       </Router>
     </div>
+    </IntlProviderWrapper>
   );
 }
 

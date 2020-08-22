@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import TextField from '../components/TextField';
 import { FormattedMessage } from 'react-intl';
+import {  IntlContext } from "../../IntlContext";
 
 import {
   Link as RouterLink
@@ -71,11 +72,11 @@ const useStyles = makeStyles((theme) => ({
 
 const LANGUAGES = [
   {
-    code: 'en-US',
+    code: 'en',
     name: 'English',
   },
   {
-    code: 'es-MX',
+    code: 'es',
     name: 'Español',
   },
 ];
@@ -83,8 +84,10 @@ const LANGUAGES = [
 export default function AppFooter() {
   const classes = useStyles();
 
-  const handleLangaugeChange = (event) => {
-    //strings.setLanguage(event.target.value || 'en-US');
+  const context = React.useContext(IntlContext);
+
+  const handleLanguageChange = (event) => {
+    context.handleLanguageChange(event.target.value);
   };
 
   return (
@@ -160,14 +163,14 @@ export default function AppFooter() {
             </Typography>
             <TextField
               select
-              onChange={handleLangaugeChange}
+              onChange={handleLanguageChange}
               SelectProps={{
                 native: true,
               }}
               className={classes.language}
             >
               {LANGUAGES.map((language) => (
-                <option value={language.code} key={language.code}>
+                <option value={language.code} key={language.code} selected={language.code == context.locale}>
                   {language.name}
                 </option>
               ))}
