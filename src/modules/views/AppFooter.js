@@ -108,7 +108,7 @@ export default function AppFooter() {
                   target="_blank" 
                   className={classes.icon}>
                   <img
-                    src="/static/appFooterFacebook.png"
+                    src="static/appFooterFacebook.png"
                     alt="Facebook"
                   />
                 </a>
@@ -118,7 +118,7 @@ export default function AppFooter() {
                   className={classes.icon}
                 >
                   <img
-                    src="/static/appFooterInstagram.png"
+                    src="static/appFooterInstagram.png"
                     alt="Instagram"
                   />
                 </a>

@@ -16,7 +16,7 @@ function App() {
   return (
     <IntlProviderWrapper>
     <div className="App">
-      <Router>
+      <Router basename={'/home'}>
         <Switch>
         <Route exact path="/">
             <Home />

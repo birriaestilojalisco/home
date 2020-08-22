@@ -46,7 +46,7 @@ function ProductSmokingHero(props) {
         <FormattedMessage id="product-smoking-hero.action.subtitle" default-message="We are here to help. Get in touch!" description="action subtitle"/>
       </Typography>
       <img
-        src="/static/producBuoy.svg"
+        src="static/producBuoy.svg"
         className={classes.buoy}
         alt="buoy"
       />

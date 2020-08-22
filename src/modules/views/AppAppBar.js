@@ -56,7 +56,7 @@ function AppAppBar(props) {
         <Toolbar className={classes.toolbar}>
           <div className={classes.left} />
           <IconButton edge="start" color="inherit">
-            <img className={classes.logo} src="/logo-300.png" />
+            <img className={classes.logo} src="logo192.png" />
           </IconButton>
           <Link
             variant="h4"

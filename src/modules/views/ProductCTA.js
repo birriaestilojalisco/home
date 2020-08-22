@@ -46,7 +46,7 @@ const styles = (theme) => ({
     right: 0,
     bottom: 0,
     width: '100%',
-    background: 'url(/static/productCTAImageDots.png)',
+    background: 'url(static/productCTAImageDots.png)',
   },
   image: {
     position: 'absolute',

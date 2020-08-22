@@ -45,7 +45,7 @@ function ProductValues(props) {
     <section className={classes.root}>
       <Container className={classes.container}>
         <img
-          src="/static/productCurvyLines.png"
+          src="static/productCurvyLines.png"
           className={classes.curvyLines}
           alt="curvy lines"
         />
@@ -54,7 +54,7 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/productValues1.svg"
+                src="static/productValues1.svg"
                 alt="suitcase"
               />
               <Typography variant="h6" className={classes.title}>
@@ -75,7 +75,7 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/productValues2.svg"
+                src="static/productValues2.svg"
                 alt="graph"
               />
               <Typography variant="h6" className={classes.title}>
@@ -96,7 +96,7 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/productValues3.svg"
+                src="static/productValues3.svg"
                 alt="clock"
               />
               <Typography variant="h6" className={classes.title}>
